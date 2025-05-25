@@ -48,7 +48,7 @@ namespace Lights_Out
                 {
                     if (game.Buttons[i, j] == clickedButton)
                     {
-                        game.flagHint = false;
+                        //  game.flagHint = false;
                         game.AddPlayerMove(i, j);
                         game.ToggleCell(i, j);
                         game.UpdateButtonsState();

@@ -17,7 +17,7 @@ namespace Lights_Out
 
         public HashSet<Point> Moves=new HashSet<Point>();
 
-        public bool flagHint = false;
+        //public bool flagHint = false;
 
         public int movesCount = 0;
 
@@ -120,16 +120,17 @@ namespace Lights_Out
 
         public void GetHint()
         {
-            if (flagHint == false)
-            {
+            //if (flagHint == false)
+            //{
                 List<Point> list = Moves.ToList();
                 Random rand = new Random();
                 int hint = rand.Next(list.Count);
                 int x = list[hint].X;
                 int y = list[hint].Y;
+            UpdateButtonsState();
                 Buttons[x, y].BackColor = AppColors.HintColor;
-            }
-            flagHint = true;
+            //}
+            //flagHint = true;
         }
 
 
